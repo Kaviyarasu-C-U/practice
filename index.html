@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfol & Project Repository</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <nav>
+        <div class="logo">MyPortfolio</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#repository">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+      
+ 
+
+    <header id="home">
+        <h1>Welcome to My Workspace</h1>
+        <p>I build things for the web and engineering.</p>
+        <a href="#repository" class="btn">Browse Projects</a>
+    </header>
+
+    <section id="repository" class="repo-container">
+        <div class="section-title">
+            <h2>Project Repository</h2>
+            <div class="search-bar">
+                <i class="fas fa-search"></i> Search files...
+            </div>
+        </div>
+
+        <div class="file-grid">
+
+            <div class="file-card">
+                <div class="file-header">
+                    <i class="fab fa-html5 file-icon"></i> <div class="file-info">
+                        <h3>Portfolio_Website.html</h3>
+                        <span>Updated 2 days ago</span>
+                    </div>
+                </div>
+                <p class="file-desc">The source code for this specific personal portfolio website using HTML, CSS, and JS.</p>
+                <div class="file-actions">
+                    <a href="#" class="action-btn btn-view">View Code</a>
+                    <a href="#" download class="action-btn btn-download"><i class="fas fa-download"></i> Save</a>
+                </div>
+            </div>
+
+            <div class="file-card">
+                <div class="file-header">
+                    <i class="fab fa-js file-icon"></i>
+                    <div class="file-info">
+                        <h3>Automation_Script.gs</h3>
+                        <span>14kb • Google Apps Script</span>
+                    </div>
+                </div>
+                <p class="file-desc">An automation script created to manage form responses and email triggers.</p>
+                <div class="file-actions">
+                    <a href="#" class="action-btn btn-view">View Repo</a>
+                    <a href="#" download class="action-btn btn-download"><i class="fas fa-download"></i> Save</a>
+                </div>
+            </div>
+
+            <div class="file-card">
+                <div class="file-header">
+                    <i class="fas fa-file-pdf file-icon"></i>
+                    <div class="file-info">
+                        <h3>Drone_Design_Specs.pdf</h3>
+                        <span>2.4 MB • PDF Document</span>
+                    </div>
+                </div>
+                <p class="file-desc">Technical specifications and CAD rendering exports for the recent drone project.</p>
+                <div class="file-actions">
+                    <a href="#" class="action-btn btn-view">Read</a>
+                    <a href="#" download class="action-btn btn-download"><i class="fas fa-download"></i> Save</a>
+                </div>
+            </div>
+
+            <div class="file-card">
+                <div class="file-header">
+                    <i class="fab fa-python file-icon"></i>
+                    <div class="file-info">
+                        <h3>Data_Analysis.py</h3>
+                        <span>Python Script</span>
+                    </div>
+                </div>
+                <p class="file-desc">A Python script used for analyzing aerodynamic data flow.</p>
+                <div class="file-actions">
+                    <a href="#" class="action-btn btn-view">View</a>
+                    <a href="#" download class="action-btn btn-download"><i class="fas fa-download"></i> Save</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>Created by Me using HTML & CSS.</p>
+        <p>contact@example.com</p>
+    </footer>
+
+    <script>
+        // Simple script to smooth scroll (optional enhancement)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

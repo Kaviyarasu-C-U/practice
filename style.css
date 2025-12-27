@@ -1,0 +1,175 @@
+        /* --- CSS VARIABLES --- */
+        :root {
+            --primary: #2563eb; /* Blue */
+            --dark: #0f172a;    /* Dark Background */
+            --light: #000204;   /* Text Color */
+            --card-bg: #1e293b; /* Card Background */
+            --border: #334155;
+        }
+
+        /* --- GLOBAL STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+        }
+
+        a { text-decoration: none; color: white; }
+        ul { list-style: none; }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: rgba(15, 23, 42, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
+        
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a:hover { color: var(--primary); }
+
+        /* --- HERO SECTION --- */
+        header {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        header h1 { font-size: 3rem; margin-bottom: 10px; }
+        header p { color: #94a3b8; font-size: 1.2rem; margin-bottom: 30px; }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn:hover { background: #1d4ed8; transform: translateY(-2px); }
+
+        /* --- REPOSITORY SECTION (PROJECTS) --- */
+        .repo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .section-title {
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Search Bar Simulation */
+        .search-bar {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 8px 15px;
+            border-radius: 5px;
+            color: #94a3b8;
+            font-size: 0.9rem;
+            width: 250px;
+        }
+
+        /* Grid Layout for Files */
+        .file-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        /* File Card Styling */
+        .file-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .file-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .file-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .file-icon {
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+
+        .file-info h3 { font-size: 1.1rem; margin-bottom: 2px; }
+        .file-info span { font-size: 0.8rem; color: #94a3b8; }
+
+        .file-desc {
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            margin-bottom: 20px;
+            height: 60px; /* Fixed height for uniformity */
+            overflow: hidden;
+        }
+
+        .file-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .action-btn {
+            flex: 1;
+            text-align: center;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+
+        .btn-view { background: #334155; color: white; }
+        .btn-download { background: var(--primary); color: white; }
+        
+        .action-btn:hover { opacity: 0.9; }
+
+        /* Icon Colors */
+        .fa-html5 { color: #e34f26; }
+        .fa-js { color: #f7df1e; }
+        .fa-file-pdf { color: #f40f02; }
+        .fa-folder { color: #60a5fa; }
+        .fa-python { color: #306998; }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border);
+            margin-top: 50px;
+            color: #64748b;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .search-bar { display: none; } /* Hide search on small screens */
+        }
